@@ -7,13 +7,66 @@
     <title>Dashboard Informativo</title>
 </head>
 <body>
-    <div class="mt-20 max-w-lg mx-44">
+    <div id="login" class="mt-20 max-w-lg mx-44">
         <h1 class="text-center text-2xl mb-5">Bienvenido</h1>
-        <form class="flex flex-col space-y-10">
-            <input type="text" placeholder="Nombre" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
-            <input type="password" placeholder="Constraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
-            <input type="submit" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded">
+        <form class="flex flex-col space-y-10" onsubmit= "return false">
+            <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
+            <input type="password" id="password" placeholder="Contraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
+            <input type="submit" onclick="validateDate()" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded">
         </form>
     </div>
+
+    <div id="username">
+
+    </div>
 </body>
+<script>
+
+alumns = [
+    {
+        name: "William",
+        lastname: "Pinto",
+        cedula: 28769872,
+        password: "tumama",
+    },
+    {
+        name: "Miguel",
+        lastname: "Petit",
+        cedula: 28767977,
+        password: "latuya",
+    },
+    {
+        name: "Jhon",
+        lastname: "Molina",
+        cedula: 28777846,
+        password: "laprimatuya",
+    },
+]
+
+var getAlumn;
+
+function validateDate() { 
+    let IdentityCard = document.getElementById('identityCard').value;
+    let password = document.getElementById('password').value;
+    
+    for (i = 0; i < alumns.length; i++) {
+        if(IdentityCard == alumns[i].cedula){
+            getAlumn = alumns[i];
+            break;
+        }
+    }
+
+    if(getAlumn == undefined) {
+        alert("Alumno no encontrado");
+    } else if (getAlumn.password != password){
+        alert("Clave incorrecta");
+    } else {  
+        document.getElementById('login').style.display = 'none';   
+        userName = document.getElementById('username');
+        userName.innerHTML = `<h2>Bienvenido ${getAlumn.name} ${getAlumn.lastname}`;
+    }  
+}
+
+</script>
 </html>
+ 
