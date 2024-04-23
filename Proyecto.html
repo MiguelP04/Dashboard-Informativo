@@ -4,21 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Dashboard Informativo</title>
+    <title>Dashboard Informatico</title>
 </head>
-<body>
-    <div id="login" class="mt-20 max-w-lg mx-44">
-        <h1 class="text-center text-2xl mb-5">Bienvenido</h1>
-        <form class="flex flex-col space-y-10" onsubmit= "return false">
-            <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
-            <input type="password" id="password" placeholder="Contraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
-            <input type="submit" onclick="validateDate()" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded">
-        </form>
-    </div>
+<body class="bg-slate-100">
 
-    <div id="username">
+    <nav class="hidden" id="barra-de-navegacion"> <!--Barra de navegacion-->
+        <div class="">
+           <div id="username">
 
-    </div>
+           </div>
+        </div>
+    </nav>
+    <main >
+
+    </main>
+
+    <section class="max-w-screen-lg mx-auto"> <!--Login-->
+
+        <div id="login" class="mt-20 grid grid-cols-12">
+            <div class="col-span-7 max-w-lg bg-white rounded-lg p-10">
+                <h1 class="text-center text-2xl mb-7">Bienvenido</h1>
+                <form class="flex flex-col space-y-10" onsubmit= "return false">
+                     <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
+                    <input type="password" id="password" placeholder="Contraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
+                    <input type="submit" onclick="validateDate()" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded">
+                </form>
+            </div>
+        
+             <div class="col-span-5">
+                <h1 class="text-2xl text-center text-cyan-500">"Dashboard Informático"</h1>
+            </div>
+        </div>
+   </section>
+
+
+
 </body>
 <script>
 
@@ -55,7 +75,7 @@ function validateDate() {
             break;
         }
     }
-
+    
     if(getAlumn == undefined) {
         alert("Alumno no encontrado");
     } else if (getAlumn.password != password){
@@ -64,6 +84,7 @@ function validateDate() {
         document.getElementById('login').style.display = 'none';   
         userName = document.getElementById('username');
         userName.innerHTML = `<h2>Bienvenido ${getAlumn.name} ${getAlumn.lastname}`;
+        document.getElementById('barra-de-navegacion').style.display = 'block'
     }  
 }
 
