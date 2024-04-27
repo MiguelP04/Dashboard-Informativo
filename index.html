@@ -38,9 +38,14 @@
             <div class="col-span-7 max-w-lg bg-white rounded-lg p-10">
                 <h1 class="text-center text-2xl mb-7">Bienvenido</h1>
                 <form class="flex flex-col space-y-10" onsubmit= "return false">
-                     <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
+                    <div class="flex justify-around">                      
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Estudiante <input type="radio" name="userType" value="student" class="hidden"></label>
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Profesor <input type="radio" name="userType" value="teacher" class="hidden"></label>
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Administrador <input type="radio" name="userType" value="administrator" class="hidden"></label>
+                    </div>
+                    <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
                     <input type="password" id="password" placeholder="Contraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
-                    <input type="submit" onclick="validateDate()" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded">
+                    <input type="submit" onclick="validateDate()" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded cursor-pointer">
                 </form>
             </div>
         
@@ -76,29 +81,113 @@ alumns = [
     },
 ]
 
+teacher = [
+    {
+        name: "Alejandro",
+        lastname: "Chiquito",
+        cedula: 25876876,
+        password: "lenguaje1"
+    },
+    {
+        name: "Aurimar",
+        lastname: "Semejal",
+        cedula: 26765876,
+        password: "teoria"
+    },
+    {
+        name: "Jesus",
+        lastname: "Ysea",
+        cedula: 22435645,
+        password: "mate3",
+    },
+]
+
+administrator = [
+    {
+        name: "Jose",
+        lastname: "Perez",
+        cedula: 22476598,
+        password: "admi",
+    },
+    {
+        name: "Ana",
+        lastname: "Garcia",
+        cedula: 20987645,
+        password: "admi2",
+    },
+]
 var getAlumn;
+var getTeacher;
+var getAdministrator;
 
 function validateDate() { 
     let IdentityCard = document.getElementById('identityCard').value;
     let password = document.getElementById('password').value;
-    
-    for (i = 0; i < alumns.length; i++) {
-        if(IdentityCard == alumns[i].cedula){
-            getAlumn = alumns[i];
+    let userType = document.getElementsByName('userType');
+
+    for(let i = 0; i < userType.length; i++) { // Definiendo que tipo de usuario escogio el cliente
+        if(userType[i].checked) {
+            userType = userType[i].value;
             break;
         }
     }
-    
-    if(getAlumn == undefined) {
-        alert("Alumno no encontrado");
-    } else if (getAlumn.password != password){
-        alert("Clave incorrecta");
-    } else {  
-        document.getElementById('login').style.display = 'none';   
-        userName = document.getElementById('username');
-        userName.innerHTML = `<h2>Bienvenido ${getAlumn.name} ${getAlumn.lastname}`;
-        document.getElementById('barra-de-navegacion').style.display = 'block'
-    }  
+
+    if(userType == "student") { // Si el usuario eligio que es estudiante, entrara en este bloque de codigo
+        for (let i = 0; i < alumns.length; i++) {
+            if(IdentityCard == alumns[i].cedula){
+                getAlumn = alumns[i];
+                break;           
+            }
+        }
+         if(getAlumn == undefined) { 
+            alert("Alumno no encontrado");
+        } else if (getAlumn.password != password){
+            alert("Clave incorrecta");
+        } else {  
+            document.getElementById('login').style.display = 'none';   
+            userName = document.getElementById('username');
+            userName.innerHTML = `<h2>Bienvenido ${getAlumn.name} ${getAlumn.lastname}`;
+            document.getElementById('barra-de-navegacion').style.display = 'block'
+        }
+    } 
+
+    if(userType == "teacher") { // Si el usuario eligio que es profesor, entrara en este bloque de codigo
+        for (let i = 0; i < teacher.length; i++) {
+            if(IdentityCard == teacher[i].cedula){
+                getTeacher = teacher[i];
+                break;           
+            }
+        }
+         if(getTeacher == undefined) {
+            alert("Profesor no encontrado");
+        } else if (getTeacher.password != password){
+            alert("Clave incorrecta");
+        } else {  
+            document.getElementById('login').style.display = 'none';   
+            userName = document.getElementById('username');
+            userName.innerHTML = `<h2>Bienvenido ${getTeacher.name} ${getTeacher.lastname}`;
+            document.getElementById('barra-de-navegacion').style.display = 'block'
+        }
+    } 
+
+    if(userType == "administrator") { // Si el usuario eligio que es administrador, entrara en este bloque de codigo
+        for (let i = 0; i < administrator.length; i++) {
+            if(IdentityCard == administrator[i].cedula){
+                getAdministrator = administrator[i];
+                break;           
+            }
+        }
+         if(getAdministrator == undefined) {
+            alert("Administrador no encontrado");
+        } else if (getAdministrator.password != password){
+            alert("Clave incorrecta");
+        } else {  
+            document.getElementById('login').style.display = 'none';   
+            userName = document.getElementById('username');
+            userName.innerHTML = `<h2>Bienvenido ${getAdministrator.name} ${getAdministrator.lastname}`;
+            document.getElementById('barra-de-navegacion').style.display = 'block'
+        }
+    }   
 }
 
 </script>
