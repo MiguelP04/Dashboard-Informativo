@@ -7,18 +7,18 @@
     <title>Dashboard Informatico</title>
 </head>
 <body class="bg-slate-100">
-
+<section class="flex">
     <nav class="hidden" id="barra-de-navegacion"> <!--Barra de navegacion-->
-        <div class="flex flex-col bg-blue-700 w-40 absolute inset-y-0 left-0 p-5 space-y-10">
+        <div class="flex flex-col bg-blue-700 sticky top-0 w-40 h-screen py-5 space-y-10">
            <h2 class="text-center text-white mb-20">Dashboard Informático</h2>
-           <div class="flex items-center space-x-2">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+           <div id="section-calender" onclick="selectCalendar()" class="flex items-center space-x-2 cursor-pointer h-14 p-5">
+            <svg id="icon-calender" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
             </svg>     
-            <p class="text-white">Calendario</p>   
+            <p id="text-calender" class="text-white" >Calendario</p>   
            </div>
 
-           <div class="flex items-center space-x-2">
+           <div class="flex items-center space-x-2 p-5">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9h6m-6 3h6m-6 3h6M6.996 9h.01m-.01 3h.01m-.01 3h.01M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
               </svg>
@@ -26,12 +26,19 @@
            </div>
         </div>
     </nav>
-    <main >
-      <div id="username" class="absolute inset-y-0 right-0">
 
+    <main class="w-screen">
+      <div id="username" class="flex justify-end sticky top-0">
       </div>
+      <section id="Calendario" class="hidden"> <!--seccion de administrador-->
+        <h1 class="text-2xl text-center mt-3">Junio 2024</h1>
+        <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 broder-solid border-2 border-sky-500 rounded-lg text-center justify-center items-center">
+            <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
+            <span class="col-start-5 hover:bg-sky-500 hover:rounded-md">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+        </div>
+      </section>
     </main>
-
+</section>
     <section class="max-w-screen-lg mx-auto"> <!--Login-->
 
         <div id="login" class="mt-20 grid grid-cols-12">
@@ -39,9 +46,9 @@
                 <h1 class="text-center text-2xl mb-7">Bienvenido</h1>
                 <form class="flex flex-col space-y-10" onsubmit= "return false">
                     <div class="flex justify-around">                      
-                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Estudiante <input type="radio" name="userType" value="student" class="hidden"></label>
-                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Profesor <input type="radio" name="userType" value="teacher" class="hidden"></label>
-                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white">Administrador <input type="radio" name="userType" value="administrator" class="hidden"></label>
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white select-none shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/70">Estudiante <input type="radio" name="userType" value="student" class="cursor-pointer"></label>
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white select-none shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/70">Profesor <input type="radio" name="userType" value="teacher" class="cursor-pointer"></label>
+                    <label class="bg-blue-600 cursor-pointer rounded-md px-2 py-1 text-white select-none shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/70">Administrador <input type="radio" name="userType" value="administrator" class="cursor-pointer"></label>
                     </div>
                     <input type="number" id="identityCard" placeholder="Cédula" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
                     <input type="password" id="password" placeholder="Contraseña" class="p-6 border-b-2 border-gray-300 hover:border-gray-700 p-6">
@@ -106,8 +113,8 @@ administrator = [
     {
         name: "Jose",
         lastname: "Perez",
-        cedula: 22476598,
-        password: "admi",
+        cedula: 2,
+        password: "2",
     },
     {
         name: "Ana",
@@ -183,11 +190,16 @@ function validateDate() {
             alert("Clave incorrecta");
         } else {  
             document.getElementById('login').style.display = 'none';   
+            document.getElementById('barra-de-navegacion').style.display = 'block'
             userName = document.getElementById('username');
             userName.innerHTML = `<h2>Bienvenido ${getAdministrator.name} ${getAdministrator.lastname}`;
-            document.getElementById('barra-de-navegacion').style.display = 'block'
         }
     }   
+}
+
+function selectCalendar() {
+    document.getElementById('Calendario').style.display = "block";
+    document.getElementById('section-calender').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
 }
 
 </script>
