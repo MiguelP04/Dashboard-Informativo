@@ -12,6 +12,13 @@
     <nav class="hidden" id="barra-de-navegacion"> 
         <div class="flex flex-col bg-blue-700 sticky top-0 w-40 h-screen py-5 space-y-10">
            <h2 class="text-center text-white mb-20">Dashboard Informático</h2> 
+           <!--Seccion de inicio-->
+           <div id="section-start" onclick="selectStart()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-800 dark:text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+            </svg>
+            <p class="text-white">Inicio</p>
+           </div> <!--Final de seccion de inicio-->
            <!--Seccion de calendario-->
            <div id="section-calender" onclick="selectCalendar()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
             <svg id="icon-calender" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -20,7 +27,7 @@
             <p id="text-calender" class="text-white">Calendario</p>   
            </div> <!--Final de seccion de calendario-->
            <!--Seccion de eventos-->
-           <div class="flex items-center space-x-2 p-5">
+           <div class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9h6m-6 3h6m-6 3h6M6.996 9h.01m-.01 3h.01m-.01 3h.01M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
               </svg>
@@ -29,37 +36,69 @@
         </div>
     </nav> <!--Final de la Barra de navegacion-->
 
-    <main class="w-screen">
-
-      <div id="username" class="flex justify-end sticky top-0">
+    <main class="w-screen bg-slate-100">
+      <div id="barra-secundaria" class="hidden">
+            <div class="flex space-x-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+                <p id="username" class="font-bold"></p>
+            </div>
       </div>
-      <section id="calenderAministrator" class="hidden"> <!--seccion de administrador-->
-        <h1 class="text-2xl text-center mt-3">Junio 2024</h1>
+
+      <section id="section-administrator"> <!--seccion de administrador-->
+        <div id="start-section-administrator" class="hidden"> <!--Inicio Administrador-->
+            <div class="relative w-52 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
+                <p class="text-center font-bold">Información</p>
+                <textarea id="info" class="w-full h-4/5 resize-none outline-none" placeholder="Escribe la Información..."></textarea>
+                <input id="submitInfo" type="submit" class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-2 m-2 rounded cursor-pointer absolute bottom-0 right-0">
+            </div>
+        </div> <!--Final inicio administrador-->
         <!--Calendario administrador-->
-        <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
-            <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
-            <span id="dia1" class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">1</span><span id="dia2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="dia3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="dia4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="dia5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="dia6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="dia7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="dia8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="dia9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="dia10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="dia11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="dia12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="dia13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="dia14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="dia15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="dia16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="dia17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="dia18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="dia19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="dia20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="dia21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="dia22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="dia23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="dia24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="dia25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="dia26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="dia27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="dia28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="dia29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="dia30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
+        <div id="calenderAministrator" class="hidden">
+            <h1 class="text-2xl text-center mt-3">Junio 2024</h1>      
+            <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500 rounded-lg text-center justify-center items-center">
+                <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
+                <span id="dia1" class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">1</span><span id="dia2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="dia3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="dia4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="dia5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="dia6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="dia7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="dia8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="dia9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="dia10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="dia11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="dia12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="dia13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="dia14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="dia15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="dia16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="dia17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="dia18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="dia19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="dia20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="dia21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="dia22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="dia23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="dia24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="dia25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="dia26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="dia27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="dia28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="dia29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="dia30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
+            </div> 
+            <dialog id="modal" class="w-80 h-96 rounded-lg p-5"><!--Modal-->          
+                <form method="dialog">
+                    <button class="bg-black text-white items-center hover:bg-red-400 px-5 py-2 absolute top-0 right-0">X</button>
+                    <h2 class="text-xl text-center mb-4">Evento</h2>
+                    <textarea id="value" class="w-full h-56 resize-none outline-none" placeholder="Escribe el Evento..."></textarea>
+                    <input id="submitEvent" type="submit" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-2 m-2 rounded cursor-pointer absolute bottom-0 right-0">
+                </form>
+            </dialog> 
         </div> <!--Final de calendario administrador-->
-        <dialog id="modal" class="w-80 h-96 rounded-lg p-5"><!--Modal-->          
-            <form method="dialog">
-                <button class="bg-black text-white hover:bg-red-400 px-3">X</button>
-                <h2 class="text-xl text-center mb-4">Evento</h2>
-                <textarea id="value" class="w-full h-56 resize-none outline-none" placeholder="Escribe el Evento..."></textarea>
-                <input id="submit" type="submit" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded cursor-pointer">
-            </form>
-        </dialog>
       </section> <!--Final de seccion de administrador-->
 
-      <section id="calenderStudent" class="hidden"> <!--Secccion de estudiante-->
-        <h1 class="text-2xl text-center mt-3">Junio 2024</h1>
-        <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
-            <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
-            <span class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer" id="select1">1</span><span id="select2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="select3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="select4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="select5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="select6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="select7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="select8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="select9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="select10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="select11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="select12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="select13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="select14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="select15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="select16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="select17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="select18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="select19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="select20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="select21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="select22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="select23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="select24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="select25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="select26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="select27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="select28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="select29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="select30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
-        </div>
-        <div id="showSavedEvent"> <!--Seccion donde se muestran los eventos-->
+      <section id="section-student"> <!--Secccion de estudiante-->
+        <div id="start-section-student" class="hidden"> <!--Inicio estudiante-->
+            <div class="relative w-52 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
+                <p id="get-info" class="font-bold"></p>
+            </div>
 
-        </div>
-      </section> <!--Final de seccion de estudiante-->
+        </div> <!--Final inicio estudiante-->
+        <div id="calenderStudent" class="hidden"> <!--Seccion de calendario estudiante-->
+            <h1 class="text-2xl text-center mt-3">Junio 2024</h1>
+            <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
+                 <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
+                 <span class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer" id="select1">1</span><span id="select2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="select3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="select4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="select5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="select6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="select7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="select8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="select9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="select10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="select11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="select12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="select13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="select14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="select15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="select16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="select17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="select18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="select19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="select20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="select21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="select22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="select23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="select24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="select25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="select26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="select27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="select28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="select29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="select30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
+            </div>
+            <div id="showSavedEvent"> <!--Seccion donde se muestran los eventos-->
+
+            </div>
+        </div><!--Final de calendario estudiante-->
+      </section> <!--Final de seccion estudiante -->
+
+      <!--Secccion de profesor-->
+      <section class="hidden">
+        <div>
+
+        </div> 
+
+      </section> <!--Final de seccion de profesor-->
     </main>
 </section>
 
@@ -113,8 +152,8 @@ teacher = [
     {
         name: "Alejandro",
         lastname: "Chiquito",
-        cedula: 25876876,
-        password: "lenguaje1"
+        cedula: 3,
+        password: "3"
     },
     {
         name: "Aurimar",
@@ -149,6 +188,7 @@ var getAlumn;
 var getTeacher;
 var getAdministrator;
 var userType = document.getElementsByName('userType');
+console.log(userType)
 
 function validateDate() { 
     let IdentityCard = document.getElementById('identityCard').value;
@@ -158,7 +198,6 @@ function validateDate() {
     for(let i = 0; i < userType.length; i++) { // Definiendo que tipo de usuario escogio el usuario
         if(userType[i].checked) { // Verifica cual tipo de usuario se selecciono
             userType = userType[i].value; // Guarda el tipo de usuario seleccionado
-            console.log(userType)
             break;
         }
     }
@@ -175,10 +214,13 @@ function validateDate() {
         } else if (getAlumn.password != password){
             alert("Clave incorrecta");
         } else {  
-            document.getElementById('login').style.display = 'none';   
-            userName = document.getElementById('username');
-            userName.innerHTML = `<h2>Bienvenido ${getAlumn.name} ${getAlumn.lastname}`;
-            document.getElementById('barra-de-navegacion').style.display = 'block'
+            alert("Bienvenido!!");
+            document.getElementById('login').style.display = 'none';  
+            document.getElementById('barra-de-navegacion').style.display = 'block' 
+            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0'
+            document.getElementById('username').innerHTML = `${getAlumn.name} ${getAlumn.lastname}`;
+            document.getElementById('start-section-student').className = "block";
+            document.getElementById('section-start').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         }
     } 
 
@@ -194,10 +236,11 @@ function validateDate() {
         } else if (getTeacher.password != password){
             alert("Clave incorrecta");
         } else {  
-            document.getElementById('login').style.display = 'none';   
-            userName = document.getElementById('username');
-            userName.innerHTML = `<h2>Bienvenido ${getTeacher.name} ${getTeacher.lastname}`;
-            document.getElementById('barra-de-navegacion').style.display = 'block'
+            alert("Bienvenido!!");
+            document.getElementById('login').style.display = 'none';  
+            document.getElementById('barra-de-navegacion').style.display = 'block' ;
+            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
+            document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;        
         }
     } 
 
@@ -213,32 +256,71 @@ function validateDate() {
         } else if (getAdministrator.password != password){
             alert("Clave incorrecta");
         } else {  
-            document.getElementById('login').style.display = 'none';   
-            document.getElementById('barra-de-navegacion').style.display = 'block'
-            userName = document.getElementById('username');
-            userName.innerHTML = `<h2>Bienvenido ${getAdministrator.name} ${getAdministrator.lastname}`;
+            alert("Bienvenido!!");
+            document.getElementById('login').style.display = 'none';  
+            document.getElementById('barra-de-navegacion').style.display = 'block' 
+            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
+            document.getElementById('username').innerHTML = `${getAdministrator.name} ${getAdministrator.lastname}`;     
+            document.getElementById('start-section-administrator').className = "block grid grid-cols-12"
+            document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         }
     }   
 }
 
 function selectCalendar() { // Esta funcion se ejecuta al darle click a la seccion de calendario del nav
     if(userType == "administrator") { // Si el usuario entra como administrador, entrara en esta condicional
-        document.getElementById('calenderAministrator').style.display = "block"; // Muestra el calendario del administrador
-        document.getElementById('section-calender').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
-    } else if(userType == "student") { // Si el usuario entra como estudiante, entrara en esta condicional
-        document.getElementById('calenderStudent').style.display = "block" // Muestra el calendario del administrador
+        document.getElementById('calenderAministrator').className = "block"; // Muestra el calendario del administrador
         document.getElementById('section-calender').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('start-section-administrator').className = 'hidden'; // Oculta la seccion de inicio de administrador
+        document.getElementById('section-start').className= "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+
+    } else if(userType == "student") { // Si el usuario entra como estudiante, entrara en esta condicional
+        document.getElementById('calenderStudent').className = "block" // Muestra el calendario del estudiante
+        document.getElementById('section-calender').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('start-section-student').className = "hidden"; // Oculta la seccion de inicio de estudiante
+        document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400"; 
+             
+    } else {
+        document.getElementById('calenderStudent').className = "block";
+        document.getElementById('section-calender').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
     }
 }
+
+function selectStart() {
+    if(userType == "administrator") {
+        document.getElementById('start-section-administrator').className = "block";
+        document.getElementById('section-start').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('calenderAministrator').className = "hidden";
+        document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400"
+    } else if(userType == "student") {
+        document.getElementById('calenderStudent').className = "hidden";
+        document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('start-section-student').className = "block";
+    } else {
+
+    }
+}
+
+let submitInfo = document.querySelector('#submitInfo');
+submitInfo.addEventListener("click", ()=> {
+    alert("Guardado correctamente");
+    let info = document.getElementById('info').value;
+    localStorage.setItem('informacion', info);
+})
+
+let saveInfo = localStorage.getItem('informacion');
+let getInfo = document.getElementById('get-info');
+getInfo.innerHTML = (`${saveInfo}`);
 
 for(i = 1; i < 31; i++){      
     let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador    
     let modal = document.querySelector('#modal'); // Toma la ventana emergente
     june.addEventListener("click", ()=> { // Cuando le de click a algun dia de junio ejecuta esta funcion
-        select = june.id; // Toma el dia seleccionado
-        modal.showModal(); // Le da estilos al modal  
-        submit = document.getElementById('submit'); // Toma el buton de enviar del modal
-        submit.addEventListener("click", ()=> { // Cuando le de click al boton de enviar se ejecuta esta funcion
+       select = june.id; // Toma el dia seleccionado
+       modal.showModal(); // Le da estilos al modal  
+       submitEvent = document.getElementById('submitEvent'); // Toma el buton de enviar del modal
+       submitEvent.addEventListener("click", ()=> { // Cuando le de click al boton de enviar se ejecuta esta funcion
             value = document.getElementById('value').value // Toma lo escrito en el modal
             localStorage.setItem(select+'junio', value); // Guarda lo escrito en el local storage 
         })
@@ -249,10 +331,15 @@ for(i = 1; i < 31; i++){
     let dias = document.querySelector("#select" + i); // Toma los dias de junio del estudiante
     let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador  
     dias.addEventListener("click", ()=> { // Cuando le de click a algun dia de junio ejecuta esta funcion
-        select = june.id;  // Toma el dia seleccionado
+        let select = june.id;  // Toma el dia seleccionado
         let showSavedEvent = document.getElementById('showSavedEvent'); // Toma el div donde se mostrara el evento
-        showSavedEvent.innerHTML = `${localStorage.getItem(select +"junio")}` // Escribe en el div el evento guardado
-        showSavedEvent.className = "bg-slate-300 w-52 h-52 text-center text-xl p-5 mt-5 ml-7 rounded-lg border-double border-4 hover:border-sky-500" // Le da estilos al div
+        let eventSaved = localStorage.getItem(select +"junio"); // Toma el evento que se guardo en ese dia del local storage
+        showSavedEvent.className = "bg-blue-600 w-52 h-52 text-center text-white text-xl p-5 mt-5 ml-7 rounded-lg" // Le da estilos al div
+        if(eventSaved == undefined) {
+            showSavedEvent.innerHTML = '<p> No hay eventos </p>';
+        } else {
+            showSavedEvent.innerHTML = `<p>${eventSaved}</p>` // Escribe en el div el evento guardado
+        }
     })
 }  
 </script>
