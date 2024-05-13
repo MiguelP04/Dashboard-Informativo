@@ -302,11 +302,12 @@ function selectStart() {
     }
 }
 
-let submitInfo = document.querySelector('#submitInfo');
+let submitInfo = document.querySelector('#submitInfo'); // Enviar los datos en la seccion de informacion del inicio
 submitInfo.addEventListener("click", ()=> {
-    alert("Guardado correctamente");
     let info = document.getElementById('info').value;
+    (info == "") ? "" : alert("Guardado correctamente");
     localStorage.setItem('informacion', info);
+    ;
 })
 
 let saveInfo = localStorage.getItem('informacion');
