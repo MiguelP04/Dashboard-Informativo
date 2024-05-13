@@ -304,9 +304,10 @@ function selectStart() {
 
 let submitInfo = document.querySelector('#submitInfo');
 submitInfo.addEventListener("click", ()=> {
-    alert("Guardado correctamente");
     let info = document.getElementById('info').value;
+    (info == "") ? "" : alert("Guardado correctamente");
     localStorage.setItem('informacion', info);
+    ;
 })
 
 let saveInfo = localStorage.getItem('informacion');
