@@ -26,13 +26,13 @@
             </svg>     
             <p id="text-calender" class="text-white">Calendario</p>   
            </div> <!--Final de seccion de calendario-->
-           <!--Seccion de eventos-->
-           <div class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
+           <!--Seccion de actividades-->
+           <div id="section-activities" onclick="selectActivities()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 9h6m-6 3h6m-6 3h6M6.996 9h.01m-.01 3h.01m-.01 3h.01M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
               </svg>
-            <p class="text-white">Eventos</p>              
-           </div> <!--Final se seccion de eventos-->
+            <p class="text-white">Actividades</p>              
+           </div> <!--Final se seccion de actividades-->
         </div>
     </nav> <!--Final de la Barra de navegacion-->
 
@@ -49,7 +49,7 @@
 
       <section id="section-administrator"> <!--seccion de administrador-->
         <div id="start-section-administrator" class="hidden"> <!--Inicio Administrador-->
-            <div class="relative w-52 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
+            <div class="relative w-60 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
                 <p class="text-center font-bold">Información</p>
                 <textarea id="info" class="w-full h-4/5 resize-none outline-none" placeholder="Escribe la Información..."></textarea>
                 <input id="submitInfo" type="submit" class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-2 m-2 rounded cursor-pointer absolute bottom-0 right-0">
@@ -75,13 +75,13 @@
 
       <section id="section-student"> <!--Secccion de estudiante-->
         <div id="start-section-student" class="hidden"> <!--Inicio estudiante-->
-            <div class="relative w-52 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
-                <p id="get-info" class="font-bold"></p>
+            <div class="relative w-60 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
+                <p id="get-info-student" class="font-bold"></p>
             </div>
 
         </div> <!--Final inicio estudiante-->
         <div id="calenderStudent" class="hidden"> <!--Seccion de calendario estudiante-->
-            <h1 class="text-2xl text-center mt-3">Junio 2024</h1>
+            <h1 class="text-2xl text-center mt-5">Junio 2024</h1>
             <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
                  <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
                  <span class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer" id="select1">1</span><span id="select2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="select3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="select4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="select5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="select6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="select7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="select8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="select9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="select10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="select11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="select12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="select13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="select14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="select15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="select16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="select17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="select18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="select19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="select20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="select21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="select22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="select23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="select24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="select25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="select26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="select27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="select28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="select29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="select30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
@@ -93,10 +93,21 @@
       </section> <!--Final de seccion estudiante -->
 
       <!--Secccion de profesor-->
-      <section class="hidden">
-        <div>
+      <section id="section-teacher">
+        <div id="start-section-teacher" class="hidden"> <!--Inicio profesor-->
+            <div class="relative w-60 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
+                <p id="get-info-teacher" class="font-bold"></p>
+            </div>
 
-        </div> 
+        </div>
+        <!--Actividades profesor-->
+        <div id="activities-section-teacher" class="hidden">
+            <h1 class="text-2xl text-center mt-5">Horario</h1>     
+            <div id="timetable-teacher" class="mt-5 gap-1 grid grid-cols-6 max-w-screen-md mx-auto border-2 border-white text-center" style="grid-template-rows: repeat(15, 1fr)">
+                <span class="bg-blue-400">Lunes</span><span class="bg-blue-400">Martes</span><span class="bg-blue-400">Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span>
+                <span class="row-start-2">7:00 - 7:45</span><span class="row-start-3">7:45 - 8:30</span><span class="row-start-4">8:30 - 9:15</span><span class="row-start-5">9:15 - 10:00</span><span class="row-start-6">10:00 - 10:45</span><span class="row-start-7">10:45 - 11:30</span><span class="row-start-8"> 11:30 - 12:15</span><span class="row-start-9">12:15 - 13:00</span><span class="row-start-10">13:00 - 13:45</span><span class="row-start-11">13:45 - 14:30</span><span class="row-start-12">14:30 - 15:15</span><span class="row-start-13">15:15 - 16:00</span><span style="grid-row-start: 14">16:00 - 16:45</span><span style="grid-row-start: 15">16:45 - 17:30</span>
+            </div>          
+        </div> <!--Final actividades profesor-->
 
       </section> <!--Final de seccion de profesor-->
     </main>
@@ -158,8 +169,8 @@ teacher = [
     {
         name: "Aurimar",
         lastname: "Semejal",
-        cedula: 26765876,
-        password: "teoria"
+        cedula: 4,
+        password: "4"
     },
     {
         name: "Jesus",
@@ -240,7 +251,9 @@ function validateDate() {
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block' ;
             document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
-            document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;        
+            document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;
+            document.getElementById('start-section-teacher').className = "block grid grid-cols-12";
+            document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";      
         }
     } 
 
@@ -283,6 +296,10 @@ function selectCalendar() { // Esta funcion se ejecuta al darle click a la secci
     } else {
         document.getElementById('calenderStudent').className = "block";
         document.getElementById('section-calender').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('start-section-teacher').className = "hidden"; // Oculta la seccion de inicio de estudiante
+        document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-activities').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('activities-section-teacher').className = "hidden";
     }
 }
 
@@ -298,7 +315,38 @@ function selectStart() {
         document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('start-section-student').className = "block";
     } else {
+        document.getElementById('calenderStudent').className = "hidden";
+        document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-activities').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('start-section-teacher').className = "block";
+        document.getElementById('activities-section-teacher').className = "hidden"; 
+    }
+}
 
+function selectActivities() {
+    if(userType == "administrator") {
+
+    } else if(userType == "student") {
+        
+    } else {
+        span = document.createElement('span');
+        document.getElementById('calenderStudent').className = "hidden";
+        document.getElementById('start-section-teacher').className = "hidden";
+        document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-activities').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('activities-section-teacher').className = "block";
+        if(getTeacher.name == "Alejandro") {
+            var span = document.createElement('span');
+            span.innerHTML = '4to Semestre';
+            span.className = "col-start-6 row-start-2 row-end-6 bg-blue-400 flex items-center justify-center";
+            document.getElementById('timetable-teacher').appendChild(span);
+        } else if(getTeacher.name == "Aurimar") {
+            span.innerHTML = '4to Semestre';
+            span.className = "col-start-2 row-start-5 row-end-9 bg-blue-400 flex items-center justify-center";
+            document.getElementById('timetable-teacher').appendChild(span);
+        }
     }
 }
 
@@ -307,12 +355,11 @@ submitInfo.addEventListener("click", ()=> {
     let info = document.getElementById('info').value;
     (info == "") ? "" : alert("Guardado correctamente");
     localStorage.setItem('informacion', info);
-    ;
 })
 
-let saveInfo = localStorage.getItem('informacion');
-let getInfo = document.getElementById('get-info');
-getInfo.innerHTML = (`${saveInfo}`);
+let saveInfo = localStorage.getItem('informacion'); // Se obtiene y guarda lo escrito en el bloque de informacion del administrador
+document.getElementById('get-info-student').innerHTML = (`${saveInfo}`); // Muestra lo guardado en la seccion de estudiante
+document.getElementById('get-info-teacher').innerHTML = (`${saveInfo}`); // Muestra lo guardado en la seccion de profesor
 
 for(i = 1; i < 31; i++){      
     let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador    
