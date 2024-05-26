@@ -57,12 +57,12 @@
         </div> <!--Final inicio administrador-->
         <!--Calendario administrador-->
         <div id="calenderAministrator" class="hidden">
-            <h1 class="text-2xl text-center mt-3">Junio 2024</h1>      
-            <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500 rounded-lg text-center justify-center items-center">
+            <h1 class="text-2xl font-bold text-center mt-3">Junio 2024</h1>      
+            <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 font-bold bg-gradient-to-r from-cyan-200 to-blue-500 rounded-lg text-center justify-center items-center">
                 <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
                 <span id="dia1" class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">1</span><span id="dia2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="dia3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="dia4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="dia5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="dia6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="dia7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="dia8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="dia9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="dia10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="dia11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="dia12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="dia13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="dia14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="dia15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="dia16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="dia17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="dia18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="dia19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="dia20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="dia21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="dia22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="dia23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="dia24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="dia25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="dia26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="dia27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="dia28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="dia29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="dia30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
             </div> 
-            <dialog id="modal" class="w-80 h-96 rounded-lg p-5"><!--Modal-->          
+            <dialog id="modal" class="w-80 h-96 shadow-2xl shadow-white rounded-lg p-5"><!--Modal-->          
                 <form method="dialog">
                     <button class="bg-black text-white items-center hover:bg-red-400 px-5 py-2 absolute top-0 right-0">X</button>
                     <h2 class="text-xl text-center mb-4">Evento</h2>
@@ -73,23 +73,61 @@
         </div> <!--Final de calendario administrador-->
       </section> <!--Final de seccion de administrador-->
 
-      <section id="section-student"> <!--Secccion de estudiante-->
+      <section id="section-student"> <!--Secccion de estudiante-->      
         <div id="start-section-student" class="hidden"> <!--Inicio estudiante-->
+
             <div class="relative w-60 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
                 <p id="get-info-student" class="font-bold"></p>
             </div>
 
         </div> <!--Final inicio estudiante-->
         <div id="calenderStudent" class="hidden"> <!--Seccion de calendario estudiante-->
-            <h1 class="text-2xl text-center mt-5">Junio 2024</h1>
-            <div class="mt-5 grid grid-cols-7 grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
+            <h1 class="text-2xl font-bold text-center mt-5">Junio 2024</h1>
+            <div class="mt-5 grid grid-cols-7 font-bold grid-rows-6 max-w-screen-md mx-auto h-80 bg-gradient-to-r from-cyan-200 to-blue-500  rounded-lg text-center justify-center items-center">
                  <span class="col-start-1">Lunes</span><span>Martes</span><span>Miercoles</span><span>Jueves</span><span>Viernes</span><span>Sabado</span><span >Domingo</span>
                  <span class="col-start-5 hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer" id="select1">1</span><span id="select2" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">2</span><span id="select3" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">3</span><span id="select4" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">4</span><span id="select5" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">5</span><span id="select6" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">6</span><span id="select7" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">7</span><span id="select8" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">8</span><span id="select9" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">9</span><span id="select10" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">10</span><span id="select11" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">11</span><span id="select12" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">12</span><span id="select13" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">13</span><span id="select14" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">14</span><span id="select15" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">15</span><span id="select16" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">16</span><span id="select17" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">17</span><span id="select18" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">18</span><span id="select19" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">19</span><span id="select20" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">20</span><span id="select21" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">21</span><span id="select22" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">22</span><span id="select23" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">23</span><span id="select24" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">24</span><span id="select25" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">25</span><span id="select26" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">26</span><span id="select27" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">27</span><span id="select28" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">28</span><span id="select29" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">29</span><span id="select30" class="hover:bg-sky-500 hover:rounded-lg mx-6 hover:text-white cursor-pointer">30</span>
             </div>
-            <div id="showSavedEvent"> <!--Seccion donde se muestran los eventos-->
+            <div id="showSavedEvent" class="hidden"> <!--Seccion donde se muestran los eventos-->
 
             </div>
         </div><!--Final de calendario estudiante-->
+
+        <div id="activities-section-student" class="hidden"><!--Actividades estudiante-->
+            <h1 class="text-2xl text-center mt-5">Horario</h1>     
+            <div id="timetable-student" class="mt-5 gap-1 grid grid-cols-7 max-w-screen-lg mx-auto bg-white border-4 border-white text-center text-white font-bold" style="grid-template-rows: repeat(15, 1fr)">
+                <span class="bg-blue-400">Hora</span><span class="bg-blue-400">Lunes</span><span class="bg-blue-400">Martes</span><span class="bg-blue-400">Miercoles</span><span class="bg-blue-400">Jueves</span><span class="bg-blue-400">Viernes</span><span class="bg-blue-400">Sabado</span>
+                <span class="row-start-2 bg-blue-400">7:00 - 7:45</span><span class="row-start-3 bg-blue-400">7:45 - 8:30</span><span class="row-start-4 bg-blue-400">8:30 - 9:15</span><span class="row-start-5 bg-blue-400">9:15 - 10:00</span><span class="row-start-6 bg-blue-400">10:00 - 10:45</span><span class="row-start-7 bg-blue-400">10:45 - 11:30</span><span class="row-start-8 bg-blue-400"> 11:30 - 12:15</span><span class="row-start-9 bg-blue-400">12:15 - 13:00</span><span class="row-start-10 bg-blue-400">13:00 - 13:45</span><span class="row-start-11 bg-blue-400">13:45 - 14:30</span><span class="row-start-12 bg-blue-400">14:30 - 15:15</span><span class="row-start-13 bg-blue-400">15:15 - 16:00</span><span class="row-start-14 bg-blue-400">16:00 - 16:45</span><span style="grid-row-start: 15; background-color: rgb(96 165 250);">16:45 - 17:30</span>
+                <span class="row-start-2 row-end-4 col-start-2 bg-blue-400 flex items-center justify-center">Educ. Fisica y Salud</span>
+                <div class="row-start-2 row-end-6 col-start-3 bg-blue-400 flex flex-col items-center justify-center">
+                    <p>Sistemas de Producción</p>
+                    <button id="activitie-sistema-de-produccion" class="bg-green-500 hover:bg-green-400 rounded-lg text-sm p-1">Ver actividad</button>
+                </div>
+                <span class="row-start-2 col-start-4 bg-gray-200"></span><span class="row-start-2 row-end-4 col-start-5 bg-blue-400 flex items-center justify-center">DIN IV (Terreno)</span><span class="row-start-2 col-start-6 bg-gray-200"></span>
+                <div class="row-start-2 row-end-6 col-start-7 bg-blue-400 flex flex-col items-center justify-center">
+                    <p>Lenguaje de Programacion I</p>
+                    <button id="activitie-lenguaje" class="bg-green-500 hover:bg-green-400 rounded-lg text-sm p-1">Ver actividad</button>
+                </div>
+                <span class="row-start-3 col-start-4 bg-gray-200"></span><span class="row-start-3 col-start-6 bg-gray-200"></span><span class="row-start-4 col-start-2 bg-gray-200"></span><span class="row-start-4 col-start-4 bg-gray-200"></span>
+                <span class="row-start-4 row-end-6 col-start-5 bg-blue-400 flex items-center justify-center">Cálculo Numérico</span>
+                <span class="row-start-4 row-end-6 col-start-6 bg-blue-400 flex items-center justify-center">DIN IV (Teoría)</span></span>
+                <div class="row-start-5 row-end-9 col-start-2 bg-blue-400 flex flex-col items-center justify-center">
+                    <p>Teoria de los Sistemas</p>
+                    <button id="activitie-teoria" class="bg-green-500 hover:bg-green-400 rounded-lg text-sm p-1">Ver actividad</button>
+                </div>
+                <span class="row-start-5 col-start-4 bg-gray-200"></span>
+                <span class="row-start-6 row-end-8 col-start-3 bg-blue-400 flex items-center justify-center">Cálculo Numérico</span>
+                <span class="row-start-6 col-start-4 bg-gray-200"></span><span class="row-start-6 col-start-5 bg-gray-200"></span><span class="row-start-6 col-start-6 bg-gray-200"></span><span class="row-start-6 col-start-7 bg-gray-200"></span><span class="row-start-7 col-start-4 bg-gray-200"></span><span class="row-start-7 col-start-5 bg-gray-200"></span><span class="row-start-6 row-end-9 col-start-6 bg-blue-400 flex items-center justify-center">Lógica Matemática</span><span class="row-start-7 col-start-7 bg-gray-200"></span><span class="row-start-8 col-start-3 bg-gray-200"></span><span class="row-start-8 col-start-4 bg-gray-200"></span>
+                <span class="row-start-8 row-end-10 col-start-5 bg-blue-400 flex items-center justify-center">Lógica Matemática</span>
+                <span class="row-start-8 col-start-7 bg-gray-200"></span><span class="row-start-9 col-start-2 bg-gray-200"></span><span class="row-start-9 col-start-3 bg-gray-200"></span><span class="row-start-9 col-start-4 bg-gray-200"></span><span class="row-start-9 col-start-6 bg-gray-200"></span><span class="row-start-9 col-start-7 bg-gray-200"></span><span class="row-start-10 col-start-2 bg-gray-200"></span><span class="row-start-10 col-start-3 bg-gray-200"></span><span class="row-start-10 col-start-4 bg-gray-200"></span>
+                <span style="grid-row-start: 10; grid-row-end: 14; grid-column-start: 5; background-color: rgb(96 165 250); display: flex; align-items: center; justify-content: center;">Procesamientos de Datos</span>
+                <span class="row-start-10 col-start-6 bg-gray-200"></span><span class="row-start-10 col-start-7 bg-gray-200"></span><span class="row-start-11 col-start-2 bg-gray-200"></span><span class="row-start-11 col-start-3 bg-gray-200"></span><span class="row-start-11 col-start-4 bg-gray-200"></span><span class="row-start-11 col-start-6 bg-gray-200"></span><span class="row-start-11 col-start-7 bg-gray-200"></span><span class="row-start-12 col-start-2 bg-gray-200"></span><span class="row-start-12 col-start-3 bg-gray-200"></span><span class="row-start-12 col-start-4 bg-gray-200"></span><span class="row-start-12 col-start-6 bg-gray-200"></span><span class="row-start-12 col-start-7 bg-gray-200"></span><span class="row-start-13 col-start-2 bg-gray-200"></span><span class="row-start-13 col-start-3 bg-gray-200"></span><span class="row-start-13 col-start-4 bg-gray-200"></span><span class="row-start-13 col-start-6 bg-gray-200"></span><span class="row-start-13 col-start-7 bg-gray-200"></span><span class="row-start-14 col-start-2 bg-gray-200"></span><span class="row-start-14 col-start-3 bg-gray-200"></span><span class="row-start-14 col-start-4 bg-gray-200"></span><span class="row-start-14 col-start-5 bg-gray-200"></span><span class="row-start-14 col-start-6 bg-gray-200"></span><span class="row-start-14 col-start-7 bg-gray-200"></span><span class="row-start-15 col-start-2 bg-gray-200"></span><span class="row-start-15 col-start-3 bg-gray-200"></span><span class="row-start-15 col-start-4 bg-gray-200"></span><span class="row-start-15 col-start-5 bg-gray-200"></span><span class="row-start-15 col-start-6 bg-gray-200"></span><span class="row-start-15 col-start-7 bg-gray-200"></span>       
+            </div>
+            <div id="get-activitie" class="hidden">
+                <p id="get-time" class="text-green-400 flex items-end mb-3"></p>
+                <h1 id="get-title" class="text-center text-xl font-bold mb-3"></h1>
+                <p id="get-description" class="text-gray-600"></p>               
+            </div>      
+        </div><!--Final actividades estudiante-->
       </section> <!--Final de seccion estudiante -->
 
       <!--Secccion de profesor-->
@@ -98,15 +136,24 @@
             <div class="relative w-60 h-96 bg-white rounded-lg border-l-4 border-green-300 ml-4 mt-4 p-2">
                 <p id="get-info-teacher" class="font-bold"></p>
             </div>
-
         </div>
         <!--Actividades profesor-->
         <div id="activities-section-teacher" class="hidden">
             <h1 class="text-2xl text-center mt-5">Horario</h1>     
             <div id="timetable-teacher" class="mt-5 gap-1 grid grid-cols-7 max-w-screen-lg mx-auto bg-white border-4 border-white text-center text-white font-bold" style="grid-template-rows: repeat(15, 1fr)">
                 <span class="bg-blue-400">Hora</span><span class="bg-blue-400">Lunes</span><span class="bg-blue-400">Martes</span><span class="bg-blue-400">Miercoles</span><span class="bg-blue-400">Jueves</span><span class="bg-blue-400">Viernes</span><span class="bg-blue-400">Sabado</span>
-                <span class="row-start-2 bg-blue-400">7:00 - 7:45</span><span class="row-start-3 bg-blue-400">7:45 - 8:30</span><span class="row-start-4 bg-blue-400">8:30 - 9:15</span><span class="row-start-5 bg-blue-400">9:15 - 10:00</span><span class="row-start-6 bg-blue-400">10:00 - 10:45</span><span class="row-start-7 bg-blue-400">10:45 - 11:30</span><span class="row-start-8 bg-blue-400"> 11:30 - 12:15</span><span class="row-start-9 bg-blue-400">12:15 - 13:00</span><span class="row-start-10 bg-blue-400">13:00 - 13:45</span><span class="row-start-11 bg-blue-400">13:45 - 14:30</span><span class="row-start-12 bg-blue-400">14:30 - 15:15</span><span class="row-start-13 bg-blue-400">15:15 - 16:00</span><span class="row-start-14 bg-blue-400">16:00 - 16:45</span><span style="grid-row-start: 15; background-color: rgb(96 165 250);">16:45 - 17:30</span><span class="row-start-2 col-start-2 bg-gray-200"></span><span class="row-start-2 col-start-3 bg-gray-200"></span><span class="row-start-2 col-start-4 bg-gray-200"></span><span class="row-start-2 col-start-5 bg-gray-200"></span><span class="row-start-2 col-start-6 bg-gray-200"></span><span class="row-start-2 col-start-7 bg-gray-200"></span><span class="row-start-3 col-start-2 bg-gray-200"></span><span class="row-start-3 col-start-3 bg-gray-200"></span><span class="row-start-3 col-start-4 bg-gray-200"></span><span class="row-start-3 col-start-5 bg-gray-200"></span><span class="row-start-3 col-start-6 bg-gray-200"></span><span class="row-start-3 col-start-7 bg-gray-200"></span><span class="row-start-4 col-start-2 bg-gray-200"></span><span class="row-start-4 col-start-3 bg-gray-200"></span><span class="row-start-4 col-start-4 bg-gray-200"></span><span class="row-start-4 col-start-5 bg-gray-200"></span><span class="row-start-4 col-start-6 bg-gray-200"></span><span class="row-start-4 col-start-7 bg-gray-200"></span><span class="row-start-5 col-start-2 bg-gray-200"></span><span class="row-start-5 col-start-3 bg-gray-200"></span><span class="row-start-5 col-start-4 bg-gray-200"></span><span class="row-start-5 col-start-5 bg-gray-200"></span><span class="row-start-5 col-start-6 bg-gray-200"></span><span class="row-start-5 col-start-7 bg-gray-200"></span><span class="row-start-6 col-start-2 bg-gray-200"></span><span class="row-start-6 col-start-3 bg-gray-200"></span><span class="row-start-6 col-start-4 bg-gray-200"></span><span class="row-start-6 col-start-5 bg-gray-200"></span><span class="row-start-6 col-start-6 bg-gray-200"></span><span class="row-start-6 col-start-7 bg-gray-200"></span><span class="row-start-7 col-start-2 bg-gray-200"></span><span class="row-start-7 col-start-3 bg-gray-200"></span><span class="row-start-7 col-start-4 bg-gray-200"></span><span class="row-start-7 col-start-5 bg-gray-200"></span><span class="row-start-7 col-start-6 bg-gray-200"></span><span class="row-start-7 col-start-7 bg-gray-200"></span><span class="row-start-8 col-start-2 bg-gray-200"></span><span class="row-start-8 col-start-3 bg-gray-200"></span><span class="row-start-8 col-start-4 bg-gray-200"></span><span class="row-start-8 col-start-5 bg-gray-200"></span><span class="row-start-8 col-start-6 bg-gray-200"></span><span class="row-start-8 col-start-7 bg-gray-200"></span><span class="row-start-9 col-start-2 bg-gray-200"></span><span class="row-start-9 col-start-3 bg-gray-200"></span><span class="row-start-9 col-start-4 bg-gray-200"></span><span class="row-start-9 col-start-5 bg-gray-200"></span><span class="row-start-9 col-start-6 bg-gray-200"></span><span class="row-start-9 col-start-7 bg-gray-200"></span><span class="row-start-10 col-start-2 bg-gray-200"></span><span class="row-start-10 col-start-3 bg-gray-200"></span><span class="row-start-10 col-start-4 bg-gray-200"></span><span class="row-start-10 col-start-5 bg-gray-200"></span><span class="row-start-10 col-start-6 bg-gray-200"></span><span class="row-start-10 col-start-7 bg-gray-200"></span><span class="row-start-11 col-start-2 bg-gray-200"></span><span class="row-start-11 col-start-3 bg-gray-200"></span><span class="row-start-11 col-start-4 bg-gray-200"></span><span class="row-start-11 col-start-5 bg-gray-200"></span><span class="row-start-11 col-start-6 bg-gray-200"></span><span class="row-start-11 col-start-7 bg-gray-200"></span><span class="row-start-12 col-start-2 bg-gray-200"></span><span class="row-start-12 col-start-3 bg-gray-200"></span><span class="row-start-12 col-start-4 bg-gray-200"></span><span class="row-start-12 col-start-5 bg-gray-200"></span><span class="row-start-12 col-start-6 bg-gray-200"></span><span class="row-start-12 col-start-7 bg-gray-200"></span><span class="row-start-13 col-start-2 bg-gray-200"></span><span class="row-start-13 col-start-3 bg-gray-200"></span><span class="row-start-13 col-start-4 bg-gray-200"></span><span class="row-start-13 col-start-5 bg-gray-200"></span><span class="row-start-13 col-start-6 bg-gray-200"></span><span class="row-start-13 col-start-7 bg-gray-200"></span><span class="row-start-14 col-start-2 bg-gray-200"></span><span class="row-start-14 col-start-3 bg-gray-200"></span><span class="row-start-14 col-start-4 bg-gray-200"></span><span class="row-start-14 col-start-5 bg-gray-200"></span><span class="row-start-14 col-start-6 bg-gray-200"></span><span class="row-start-14 col-start-7 bg-gray-200"></span><span class="row-start-15 col-start-2 bg-gray-200"></span><span class="row-start-15 col-start-3 bg-gray-200"></span><span class="row-start-15 col-start-4 bg-gray-200"></span><span class="row-start-15 col-start-5 bg-gray-200"></span><span class="row-start-15 col-start-6 bg-gray-200"></span><span class="row-start-15 col-start-7 bg-gray-200"></span>       <span id="select"></span>
-            </div>          
+                <span class="row-start-2 bg-blue-400">7:00 - 7:45</span><span class="row-start-3 bg-blue-400">7:45 - 8:30</span><span class="row-start-4 bg-blue-400">8:30 - 9:15</span><span class="row-start-5 bg-blue-400">9:15 - 10:00</span><span class="row-start-6 bg-blue-400">10:00 - 10:45</span><span class="row-start-7 bg-blue-400">10:45 - 11:30</span><span class="row-start-8 bg-blue-400"> 11:30 - 12:15</span><span class="row-start-9 bg-blue-400">12:15 - 13:00</span><span class="row-start-10 bg-blue-400">13:00 - 13:45</span><span class="row-start-11 bg-blue-400">13:45 - 14:30</span><span class="row-start-12 bg-blue-400">14:30 - 15:15</span><span class="row-start-13 bg-blue-400">15:15 - 16:00</span><span class="row-start-14 bg-blue-400">16:00 - 16:45</span><span style="grid-row-start: 15; background-color: rgb(96 165 250);">16:45 - 17:30</span><span class="row-start-2 col-start-2 bg-gray-200"></span><span class="row-start-2 col-start-3 bg-gray-200"></span><span class="row-start-2 col-start-4 bg-gray-200"></span><span class="row-start-2 col-start-5 bg-gray-200"></span><span class="row-start-2 col-start-6 bg-gray-200"></span><span class="row-start-2 col-start-7 bg-gray-200"></span><span class="row-start-3 col-start-2 bg-gray-200"></span><span class="row-start-3 col-start-3 bg-gray-200"></span><span class="row-start-3 col-start-4 bg-gray-200"></span><span class="row-start-3 col-start-5 bg-gray-200"></span><span class="row-start-3 col-start-6 bg-gray-200"></span><span class="row-start-3 col-start-7 bg-gray-200"></span><span class="row-start-4 col-start-2 bg-gray-200"></span><span class="row-start-4 col-start-3 bg-gray-200"></span><span class="row-start-4 col-start-4 bg-gray-200"></span><span class="row-start-4 col-start-5 bg-gray-200"></span><span class="row-start-4 col-start-6 bg-gray-200"></span><span class="row-start-4 col-start-7 bg-gray-200"></span><span class="row-start-5 col-start-2 bg-gray-200"></span><span class="row-start-5 col-start-3 bg-gray-200"></span><span class="row-start-5 col-start-4 bg-gray-200"></span><span class="row-start-5 col-start-5 bg-gray-200"></span><span class="row-start-5 col-start-6 bg-gray-200"></span><span class="row-start-5 col-start-7 bg-gray-200"></span><span class="row-start-6 col-start-2 bg-gray-200"></span><span class="row-start-6 col-start-3 bg-gray-200"></span><span class="row-start-6 col-start-4 bg-gray-200"></span><span class="row-start-6 col-start-5 bg-gray-200"></span><span class="row-start-6 col-start-6 bg-gray-200"></span><span class="row-start-6 col-start-7 bg-gray-200"></span><span class="row-start-7 col-start-2 bg-gray-200"></span><span class="row-start-7 col-start-3 bg-gray-200"></span><span class="row-start-7 col-start-4 bg-gray-200"></span><span class="row-start-7 col-start-5 bg-gray-200"></span><span class="row-start-7 col-start-6 bg-gray-200"></span><span class="row-start-7 col-start-7 bg-gray-200"></span><span class="row-start-8 col-start-2 bg-gray-200"></span><span class="row-start-8 col-start-3 bg-gray-200"></span><span class="row-start-8 col-start-4 bg-gray-200"></span><span class="row-start-8 col-start-5 bg-gray-200"></span><span class="row-start-8 col-start-6 bg-gray-200"></span><span class="row-start-8 col-start-7 bg-gray-200"></span><span class="row-start-9 col-start-2 bg-gray-200"></span><span class="row-start-9 col-start-3 bg-gray-200"></span><span class="row-start-9 col-start-4 bg-gray-200"></span><span class="row-start-9 col-start-5 bg-gray-200"></span><span class="row-start-9 col-start-6 bg-gray-200"></span><span class="row-start-9 col-start-7 bg-gray-200"></span><span class="row-start-10 col-start-2 bg-gray-200"></span><span class="row-start-10 col-start-3 bg-gray-200"></span><span class="row-start-10 col-start-4 bg-gray-200"></span><span class="row-start-10 col-start-5 bg-gray-200"></span><span class="row-start-10 col-start-6 bg-gray-200"></span><span class="row-start-10 col-start-7 bg-gray-200"></span><span class="row-start-11 col-start-2 bg-gray-200"></span><span class="row-start-11 col-start-3 bg-gray-200"></span><span class="row-start-11 col-start-4 bg-gray-200"></span><span class="row-start-11 col-start-5 bg-gray-200"></span><span class="row-start-11 col-start-6 bg-gray-200"></span><span class="row-start-11 col-start-7 bg-gray-200"></span><span class="row-start-12 col-start-2 bg-gray-200"></span><span class="row-start-12 col-start-3 bg-gray-200"></span><span class="row-start-12 col-start-4 bg-gray-200"></span><span class="row-start-12 col-start-5 bg-gray-200"></span><span class="row-start-12 col-start-6 bg-gray-200"></span><span class="row-start-12 col-start-7 bg-gray-200"></span><span class="row-start-13 col-start-2 bg-gray-200"></span><span class="row-start-13 col-start-3 bg-gray-200"></span><span class="row-start-13 col-start-4 bg-gray-200"></span><span class="row-start-13 col-start-5 bg-gray-200"></span><span class="row-start-13 col-start-6 bg-gray-200"></span><span class="row-start-13 col-start-7 bg-gray-200"></span><span class="row-start-14 col-start-2 bg-gray-200"></span><span class="row-start-14 col-start-3 bg-gray-200"></span><span class="row-start-14 col-start-4 bg-gray-200"></span><span class="row-start-14 col-start-5 bg-gray-200"></span><span class="row-start-14 col-start-6 bg-gray-200"></span><span class="row-start-14 col-start-7 bg-gray-200"></span><span class="row-start-15 col-start-2 bg-gray-200"></span><span class="row-start-15 col-start-3 bg-gray-200"></span><span class="row-start-15 col-start-4 bg-gray-200"></span><span class="row-start-15 col-start-5 bg-gray-200"></span><span class="row-start-15 col-start-6 bg-gray-200"></span><span class="row-start-15 col-start-7 bg-gray-200"></span>
+                <div id="add-activitie" > <p>4to Semestre</p> <button id="button-add-activitie" class="bg-gray-400 hover:bg-gray-500 p-1 rounded-lg text-xs">Agregar actividad</button></div>       
+            </div> 
+            <dialog id="modal-activitie" class="w-96 h-96 rounded-lg p-7">
+                <form method="dialog">
+                    <button class="bg-black text-white items-center hover:bg-red-400 px-5 py-2 absolute top-0 right-0">X</button>
+                    <input id="title-activitie" class="border-b-2 w-full mt-6 text-lg outline-none" type="text" placeholder="Añadir título...">
+                    <textarea id="description-activitie" class="w-full h-40 bg-gray-100 p-2 resize-none outline-none rounded-lg mt-4 text-gray-600" placeholder="Descripción..."></textarea>
+                    <label class="text-gray-600">Hora: <input id="time-activitie" type="datetime-local" class="mt-4"></label> 
+                    <input id="submitActivitie" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-2 m-2 rounded cursor-pointer absolute bottom-0 right-0" type="submit" >
+                </form>
+            </dialog>         
         </div> <!--Final actividades profesor-->
 
       </section> <!--Final de seccion de profesor-->
@@ -173,10 +220,10 @@ teacher = [
         password: "4"
     },
     {
-        name: "Jesus",
-        lastname: "Ysea",
-        cedula: 22435645,
-        password: "mate3",
+        name: "Carmen",
+        lastname: "Marcano",
+        cedula: 5,
+        password: "5",
     },
 ]
 
@@ -199,7 +246,6 @@ var getAlumn;
 var getTeacher;
 var getAdministrator;
 var userType = document.getElementsByName('userType');
-console.log(userType)
 
 function validateDate() { 
     let IdentityCard = document.getElementById('identityCard').value;
@@ -209,8 +255,9 @@ function validateDate() {
     for(let i = 0; i < userType.length; i++) { // Definiendo que tipo de usuario escogio el usuario
         if(userType[i].checked) { // Verifica cual tipo de usuario se selecciono
             userType = userType[i].value; // Guarda el tipo de usuario seleccionado
+            console.log(userType)
             break;
-        }
+        } 
     }
 
     if(userType == "student") { // Si el usuario eligio que es estudiante, entrara en este bloque de codigo
@@ -292,6 +339,8 @@ function selectCalendar() { // Esta funcion se ejecuta al darle click a la secci
         document.getElementById('section-calender').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('start-section-student').className = "hidden"; // Oculta la seccion de inicio de estudiante
         document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400"; 
+        document.getElementById('activities-section-student').className = "hidden"
+        document.getElementById('section-activities').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
              
     } else {
         document.getElementById('calenderStudent').className = "block";
@@ -314,6 +363,8 @@ function selectStart() {
         document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('start-section-student').className = "block";
+        document.getElementById('activities-section-student').className = "hidden";
+        document.getElementById('section-activities').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
     } else {
         document.getElementById('calenderStudent').className = "hidden";
         document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
@@ -328,44 +379,120 @@ function selectActivities() {
     if(userType == "administrator") {
 
     } else if(userType == "student") {
-        
+        document.getElementById('calenderStudent').className = "hidden";
+        document.getElementById('start-section-student').className = "hidden";
+        document.getElementById('activities-section-student').className = "block"
+        document.getElementById('section-activities').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+
     } else {
         document.getElementById('calenderStudent').className = "hidden";
         document.getElementById('start-section-teacher').className = "hidden";
         document.getElementById('section-calender').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-start').className = "flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
-        document.getElementById('section-activities').className = "select-none bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('section-activities').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('activities-section-teacher').className = "block";
         if(getTeacher.name == "Alejandro") {
-            span = document.getElementById('select');
-            span.innerHTML = '4to Semestre';
-            span.className = "col-start-7 row-start-2 row-end-6 bg-blue-400 flex items-center justify-center";
-            document.getElementById('timetable-teacher').appendChild(span);
+            document.getElementById('add-activitie').className = "col-start-7 row-start-2 row-end-6 bg-blue-400 flex flex-col items-center justify-center space-y-2";
         } else if(getTeacher.name == "Aurimar") {
-            span = document.getElementById('select');
-            span.innerHTML = '4to Semestre';
-            span.className = "col-start-2 row-start-5 row-end-9 bg-blue-400 flex items-center justify-center";
-            document.getElementById('timetable-teacher').appendChild(span);
+            document.getElementById('add-activitie').className = "col-start-2 row-start-5 row-end-9 bg-blue-400 flex flex-col items-center justify-center space-y-2";
+        } else if(getTeacher.name == "Carmen") {
+            document.getElementById('add-activitie').className = "row-start-2 row-end-6 col-start-3 bg-blue-400 flex flex-col items-center justify-center space-y-2";
         }
     }
 }
-
-let submitInfo = document.querySelector('#submitInfo'); // Enviar los datos en la seccion de informacion del inicio
-submitInfo.addEventListener("click", ()=> {
-    let info = document.getElementById('info').value;
+//  Guardar los datos de la seccion de informacion del inicio
+let submitInfo = document.querySelector('#submitInfo'); // Toma el boton de enviar 
+submitInfo.addEventListener("click", ()=> { // Al hacer click en el boton, se ejecuta esta funcion
+    let info = document.getElementById('info').value; // Toma lo escrito en el bloque de informacion
     (info == "") ? "" : alert("Guardado correctamente");
-    localStorage.setItem('informacion', info);
+    localStorage.setItem('informacion', info); // Se guarda en el local storage lo escrito en el bloque de informacion
 })
 
+// Obtener los datos de la seccion de informacion del inicio
 let saveInfo = localStorage.getItem('informacion'); // Se obtiene y guarda lo escrito en el bloque de informacion del administrador
 document.getElementById('get-info-student').innerHTML = (`${saveInfo}`); // Muestra lo guardado en la seccion de estudiante
 document.getElementById('get-info-teacher').innerHTML = (`${saveInfo}`); // Muestra lo guardado en la seccion de profesor
 
+// Muestra el modal de agregar actividades
+document.getElementById('button-add-activitie').addEventListener('click', ()=> {  // Al darle click al boton se muestra el modal
+    modalActivities = document.querySelector('#modal-activitie'); // Toma el dialog de actividades
+    modalActivities.showModal(); // Le da estilos al modal
+})
+
+// Guardar los datos del modal de agregar actividades
+document.getElementById('submitActivitie').addEventListener('click', ()=> { // Toma el boton de enviar y se ejecuata la funcion
+    if(getTeacher.name == "Alejandro") {
+        activitieLenguaje1 = [
+            {
+                title: document.getElementById('title-activitie').value,
+                description: document.getElementById('description-activitie').value,
+                time: document.getElementById('time-activitie').value,
+            },
+        ]  
+        let setActivite = JSON.stringify(activitieLenguaje1);
+        localStorage.setItem("actividad-lenguaje-1", setActivite);
+
+    } else if(getTeacher.name == "Aurimar") {
+        activitieTeoria = [
+            {
+                title: document.getElementById('title-activitie').value,
+                description: document.getElementById('description-activitie').value,
+                time: document.getElementById('time-activitie').value,
+            },
+        ]
+        let setActivite = JSON.stringify(activitieTeoria);
+        localStorage.setItem("actividad-teoria", setActivite);
+
+    } else if(getTeacher.name == "Carmen") {
+        activitieSistemaDeProduccion = [
+            {
+                title: document.getElementById('title-activitie').value,
+                description: document.getElementById('description-activitie').value,
+                time: document.getElementById('time-activitie').value,
+            },
+        ]
+        let setActivite = JSON.stringify(activitieSistemaDeProduccion);
+        localStorage.setItem("actividad-sistema-de-produccion", setActivite);
+    }
+})
+
+// Muestra la actividades del estudiante
+document.getElementById('activitie-lenguaje').addEventListener('click', ()=> { // Toma el bloque de hora de Lenguaje de programacion 1
+    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500  break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    let arrayLenguaje1 = JSON.parse(localStorage.getItem('actividad-lenguaje-1'));
+    arrayLenguaje1.forEach(element => {
+        document.getElementById('get-title').innerHTML = element.title
+        document.getElementById('get-description').innerHTML = element.description
+        document.getElementById('get-time').innerHTML = element.time
+    }) 
+})
+document.getElementById('activitie-teoria').addEventListener('click', ()=> { // Toma el bloque de hora de Teoria de Sistemas
+    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500 break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    let arrayTeoria = JSON.parse(localStorage.getItem('actividad-teoria'));
+    arrayTeoria.forEach(element => {
+        document.getElementById('get-title').innerHTML = element.title
+        document.getElementById('get-description').innerHTML = element.description
+        document.getElementById('get-time').innerHTML = element.time
+    }) 
+})
+document.getElementById('activitie-sistema-de-produccion').addEventListener('click', ()=> {
+    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500  break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    let arraySistemaDeProduccion = JSON.parse(localStorage.getItem('actividad-sistema-de-produccion'));
+    arraySistemaDeProduccion.forEach(element => {
+        document.getElementById('get-title').innerHTML = element.title
+        document.getElementById('get-description').innerHTML = element.description
+        document.getElementById('get-time').innerHTML = element.time
+    })
+})
+
 for(i = 1; i < 31; i++){      
-    let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador    
+    let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador  
     let modal = document.querySelector('#modal'); // Toma la ventana emergente
     june.addEventListener("click", ()=> { // Cuando le de click a algun dia de junio ejecuta esta funcion
        select = june.id; // Toma el dia seleccionado
+       console.log(select)
        modal.showModal(); // Le da estilos al modal  
        submitEvent = document.getElementById('submitEvent'); // Toma el buton de enviar del modal
        submitEvent.addEventListener("click", ()=> { // Cuando le de click al boton de enviar se ejecuta esta funcion
@@ -382,8 +509,8 @@ for(i = 1; i < 31; i++){
         let select = june.id;  // Toma el dia seleccionado
         let showSavedEvent = document.getElementById('showSavedEvent'); // Toma el div donde se mostrara el evento
         let eventSaved = localStorage.getItem(select +"junio"); // Toma el evento que se guardo en ese dia del local storage
-        showSavedEvent.className = "bg-blue-600 w-52 h-52 text-center text-white text-xl p-5 mt-5 ml-7 rounded-lg" // Le da estilos al div
-        if(eventSaved == undefined) {
+        showSavedEvent.className = "block bg-white text-xl shadow-2xl shadow-blue-500 cbreak-words font-bold text-center p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-blue-400" // Le da estilos al div
+        if(eventSaved == "" || eventSaved == undefined) {
             showSavedEvent.innerHTML = '<p> No hay eventos </p>';
         } else {
             showSavedEvent.innerHTML = `<p>${eventSaved}</p>` // Escribe en el div el evento guardado
