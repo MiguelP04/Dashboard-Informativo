@@ -10,8 +10,11 @@
 <section class="flex">
     <!--Barra de navegacion-->
     <nav class="hidden" id="barra-de-navegacion"> 
-        <div class="flex flex-col bg-blue-700 sticky top-0 w-40 h-screen py-5 space-y-10">
-           <h2 class="text-center text-white mb-20">Dashboard Informático</h2> 
+        <div class="flex flex-col bg-blue-700 sticky top-0 w-40 h-screen py-5 space-y-10 font-bold">
+           <div class="flex flex-col justify-center items-center" >
+                <img src="Logo/2.png" class="rounded-full w-24 h-24">
+                <h2 class="text-center text-white font-serif border-b-2 border-blue-300">Dashboard Informático</h2>               
+           </div>
            <!--Seccion de inicio-->
            <div id="section-start" onclick="selectStart()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-800 dark:text-white">
@@ -20,11 +23,11 @@
             <p class="text-white">Inicio</p>
            </div> <!--Final de seccion de inicio-->
            <!--Seccion de calendario-->
-           <div id="section-calender" onclick="selectCalendar()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
+           <div id="section-calender" onclick="selectCalendar()" class="flex items-center space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400">
             <svg id="icon-calender" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
             </svg>     
-            <p id="text-calender" class="text-white">Calendario</p>   
+            <p id="text-calender" class="text-white">Cronograma</p>   
            </div> <!--Final de seccion de calendario-->
            <!--Seccion de actividades-->
            <div id="section-activities" onclick="selectActivities()" class="flex items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400">
@@ -44,18 +47,23 @@
 
     <main class="w-screen bg-slate-100">
       <div id="barra-secundaria" class="hidden">
-            <div class="flex space-x-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                </svg>
-                <p id="username" class="font-bold"></p>
-            </div>
+        <div class="flex space-x-20">
+            <a class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-500 hover:underline" href="http://aplicaciones.unefa.edu.ve/SC3_unefa/modulo/Ms34mun3Pr4Pr/" target="_blank">Siceu</a>
+            <a class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-500 hover:underline" href="http://www.unefa.edu.ve/CMS/administrador/vistas/archivos/REGLAMENTO%20ADMISION%20PERMANENCIA%20Y%20EGRESO.pdf" target="_blank">Reglamento</a>
+            <a class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-500 hover:underline" href="http://unefa.edu.ve/portal/" target="_blank">WEB UNEFA</a>
+        </div>
+        <div class="flex space-x-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+            <p id="username"></p>
+         </div>
       </div>
 
       <section id="section-administrator"> <!--seccion de administrador-->
         <div id="start-section-administrator" class="hidden"> <!--Inicio Administrador-->
-            <div class="relative w-60 h-96 bg-white rounded-lg border-l-8 border-green-300 ml-4 mt-4 p-2">
+            <div class="relative max-w-screen-sm h-40 bg-white rounded-lg border-l-8 border-green-300 mx-auto mt-5 p-2">
                 <p class="text-center text-xl font-bold border-b-2 border-green-300">Información</p>
                 <textarea id="info" class="w-full h-4/5 resize-none outline-none" placeholder="Escribe la Información..."></textarea>
                 <input id="submitInfo" type="submit" class="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-2 m-2 rounded cursor-pointer absolute bottom-0 right-0">
@@ -87,9 +95,9 @@
       <section id="section-student"> <!--Secccion de estudiante-->      
         <div id="start-section-student" class="hidden"> <!--Inicio estudiante-->
 
-            <div class="relative font-bold overflow-auto break-words w-60 h-96 bg-white rounded-lg border-l-8 border-green-300 ml-4 mt-4 p-2">
-                <h1 class="text-center text-xl border-b-2 border-green-300">Información</h1>
-                <p id="get-info-student" class="text-gray-500"></p>
+            <div class="relative overflow-auto break-words max-w-screen-sm h-40 bg-white rounded-lg border-l-8 border-green-300 mt-5 mx-auto p-2">
+                <h1 class="text-center font-bold text-xl border-b-2 border-green-300">Información</h1>
+                <p id="get-info-student" class="text-gray-500 font-serif"></p>
             </div>
 
         </div> <!--Final inicio estudiante-->
@@ -145,9 +153,9 @@
       <!--Secccion de profesor-->
       <section id="section-teacher">
         <div id="start-section-teacher" class="hidden"> <!--Inicio profesor-->
-            <div class="relative font-bold overflow-auto w-60 break-words h-96 bg-white rounded-lg border-l-8 border-green-300 ml-4 mt-4 p-2">
-                <h1 class="text-center text-xl border-b-2 border-green-300">Información</h1>
-                <p id="get-info-teacher" class="text-gray-500"></p>
+            <div class="relative overflow-auto break-words max-w-screen-sm h-40 bg-white rounded-lg border-l-8 border-green-300 mt-5 mx-auto p-2">
+                <h1 class="text-center font-bold text-xl border-b-2 border-green-300">Información</h1>
+                <p id="get-info-teacher" class="text-gray-500 font-serif"></p>
             </div>
         </div>
         <!--Actividades profesor-->
@@ -322,7 +330,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block';
-            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAlumn.name} ${getAlumn.lastname}`;
             document.getElementById('start-section-student').className = "block";
             document.getElementById('section-start').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
@@ -344,9 +352,9 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block' ;
-            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;
-            document.getElementById('start-section-teacher').className = "block grid grid-cols-12";
+            document.getElementById('start-section-teacher').className = "block";
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";      
         }
     } 
@@ -366,9 +374,9 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block' 
-            document.getElementById('barra-secundaria').className = 'block flex bg-white p-4 justify-end sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAdministrator.name} ${getAdministrator.lastname}`;     
-            document.getElementById('start-section-administrator').className = "block grid grid-cols-12"
+            document.getElementById('start-section-administrator').className = "block"
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
         }
     }   
@@ -378,7 +386,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
 function selectCalendar() { // Esta funcion se ejecuta al darle click a la seccion de calendario del nav
     if(userType == "administrator") { // Si el usuario entra como administrador, entrara en esta condicional
         document.getElementById('calenderAministrator').className = "block"; // Muestra el calendario del administrador
-        document.getElementById('section-calender').className = "bg-blue-400 select-none flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('section-calender').className = "bg-blue-400 select-none flex items-center space-x-2 cursor-pointer h-14 p-4";
         document.getElementById('start-section-administrator').className = 'hidden'; // Oculta la seccion de inicio de administrador
         document.getElementById('section-start').className= "flex select-none items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-activities').className = "flex select-none items-center space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
@@ -386,7 +394,7 @@ function selectCalendar() { // Esta funcion se ejecuta al darle click a la secci
 
     } else if(userType == "student") { // Si el usuario entra como estudiante, entrara en esta condicional
         document.getElementById('calenderStudent').className = "block" // Muestra el calendario del estudiante
-        document.getElementById('section-calender').className = "bg-blue-400 flex select-none items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('section-calender').className = "bg-blue-400 flex select-none items-center space-x-2 cursor-pointer h-14 p-4";
         document.getElementById('start-section-student').className = "hidden"; // Oculta la seccion de inicio de estudiante
         document.getElementById('section-start').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400"; 
         document.getElementById('activities-section-student').className = "hidden"
@@ -394,7 +402,7 @@ function selectCalendar() { // Esta funcion se ejecuta al darle click a la secci
              
     } else {
         document.getElementById('calenderStudent').className = "block";
-        document.getElementById('section-calender').className= "bg-blue-400 select-none flex items-center space-x-2 cursor-pointer h-14 p-5";
+        document.getElementById('section-calender').className= "bg-blue-400 select-none flex items-center space-x-2 cursor-pointer h-14 p-4";
         document.getElementById('start-section-teacher').className = "hidden"; // Oculta la seccion de inicio de estudiante
         document.getElementById('section-start').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-activities').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
@@ -407,19 +415,19 @@ function selectStart() {
         document.getElementById('start-section-administrator').className = "block";
         document.getElementById('section-start').className= "bg-blue-400 flex select-none items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('calenderAministrator').className = "hidden";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('section-activities').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('activities-section-student').className = "hidden"
     } else if(userType == "student") {
         document.getElementById('calenderStudent').className = "hidden";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('section-start').className = "bg-blue-400 flex select-none items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('start-section-student').className = "block";
         document.getElementById('activities-section-student').className = "hidden";
         document.getElementById('section-activities').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
     } else {
         document.getElementById('calenderStudent').className = "hidden";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('section-activities').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-start').className = "bg-blue-400 flex select-none items-center space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('start-section-teacher').className = "block";
@@ -433,7 +441,7 @@ function selectActivities() {
         document.getElementById('start-section-administrator').className = "hidden";
         document.getElementById('section-activities').className = "bg-blue-400 flex items-center select-none space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('section-start').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('activities-section-student').className = "block"
 
     } else if(userType == "student") {
@@ -441,13 +449,13 @@ function selectActivities() {
         document.getElementById('start-section-student').className = "hidden";
         document.getElementById('activities-section-student').className = "block"
         document.getElementById('section-activities').className = "bg-blue-400 flex items-center select-none space-x-2 cursor-pointer h-14 p-5";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('section-start').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
 
     } else {
         document.getElementById('calenderStudent').className = "hidden";
         document.getElementById('start-section-teacher').className = "hidden";
-        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
+        document.getElementById('section-calender').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-4 hover:bg-blue-400";
         document.getElementById('section-start').className = "flex items-center select-none space-x-2 cursor-pointer h-14 p-5 hover:bg-blue-400";
         document.getElementById('section-activities').className = "bg-blue-400 flex items-center select-none space-x-2 cursor-pointer h-14 p-5";
         document.getElementById('activities-section-teacher').className = "block";
@@ -466,7 +474,7 @@ var saveInfo = localStorage.getItem('informacion'); // Se obtiene la informacion
 console.log(typeof saveInfo, "info")
 if(typeof saveInfo == "string" && saveInfo != "") { // Si hay informacion, entrara en esta condicion
     document.getElementById("info").innerHTML = saveInfo; // Se escribe en el cuadro la informacion obtenida
-    document.getElementById("delete-info").className = "block w-10 cursor-pointer"; // Muestra el boton para borrar informacion
+    document.getElementById("delete-info").className = "block w-10 cursor-pointer absolute bottom-0 right-20 m-1"; // Muestra el boton para borrar informacion
 }
 let submitInfo = document.querySelector('#submitInfo'); // Toma el boton de enviar 
 submitInfo.addEventListener("click", ()=> { // Al hacer click en el boton, se ejecuta esta funcion
@@ -479,7 +487,7 @@ submitInfo.addEventListener("click", ()=> { // Al hacer click en el boton, se ej
     }  
 })
 document.getElementById("delete-info").addEventListener("click", ()=> { // Se obtiene el boton de eliminar y al darle click se ejecuta:
-    document.getElementById("info").innerHTML = ""; // Borra lo escrito en el bloque de informacion
+    document.getElementById("info").value = ""; // Borra lo escrito en el bloque de informacion
     localStorage.setItem('informacion', ""); // Borra lo escrito en el local storage
 })
 
@@ -593,7 +601,7 @@ document.getElementById('delete-activitie').addEventListener("click", ()=> {
 
 // Muestra la actividades del estudiante
 document.getElementById('activitie-lenguaje').addEventListener('click', ()=> { // Toma el bloque de hora de Lenguaje de programacion 1
-    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500 break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    document.getElementById('get-activitie').className = "block bg-white overflow-auto  shadow-2xl shadow-green-500 break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
     let arrayLenguaje1 = localStorage.getItem('actividad-lenguaje-1');
     if(arrayLenguaje1 == "" || arrayLenguaje1 == null) {
         document.getElementById('get-title').innerHTML = "No hay actividades.";
@@ -608,7 +616,7 @@ document.getElementById('activitie-lenguaje').addEventListener('click', ()=> { /
     })}
 })
 document.getElementById('activitie-teoria').addEventListener('click', ()=> { // Toma el bloque de hora de Teoria de Sistemas
-    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500 break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    document.getElementById('get-activitie').className = "block bg-white overflow-auto shadow-2xl shadow-green-500 break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
     let arrayTeoria = localStorage.getItem('actividad-teoria');
     if(arrayTeoria == "" || arrayTeoria == null) {
         document.getElementById('get-title').innerHTML = "No hay actividades.";
@@ -623,7 +631,7 @@ document.getElementById('activitie-teoria').addEventListener('click', ()=> { // 
     })}
 })
 document.getElementById('activitie-sistema-de-produccion').addEventListener('click', ()=> { 
-    document.getElementById('get-activitie').className = "block bg-white shadow-2xl shadow-green-500  break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
+    document.getElementById('get-activitie').className = "block bg-white overflow-auto shadow-2xl shadow-green-500  break-words p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-green-300"; // Le da estilos al div donde se mostraran las actividades
     let arraySistemaDeProduccion = localStorage.getItem('actividad-sistema-de-produccion');
     if(arraySistemaDeProduccion == "" || arraySistemaDeProduccion == null) {
         document.getElementById('get-title').innerHTML = "No hay actividades.";
