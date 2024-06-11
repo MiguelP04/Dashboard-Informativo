@@ -23,6 +23,18 @@ alumns = [
         cedula: 8,
         password: "8",
     },
+    {
+        name: "Fabbio",
+        lastname: "Galante",
+        cedula: 31543956,
+        password: "10elgoat",
+    },
+    {
+        name: "Crismar",
+        lastname: "Hernandez",
+        cedula: 28767682,
+        password: "4321",
+    },
     
 ]
 
@@ -36,8 +48,8 @@ teacher = [
     {
         name: "Aurimar",
         lastname: "Semejal",
-        cedula: 4,
-        password: "4"
+        cedula: 26598855,
+        password: "1234"
     },
     {
         name: "Carmen",
@@ -424,17 +436,40 @@ document.getElementById("section-exit").addEventListener("click", ()=> { // Cuan
     })
 })
 
+for(let i = 1; i < 31; i++) {
+    let juneAdministrator = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador  
+    let juneStudent = document.querySelector("#select" + i); // Toma los dias de junio del estudiante
+    let dia = localStorage.getItem('dia'+ i + 'junio');
+    if(typeof dia == "string" && dia != "") {
+        juneAdministrator.classList.remove("hover:bg-sky-500", "hover:rounded-lg", "hover:text-white");
+        juneAdministrator.classList.add("bg-emerald-400", "rounded-full");
+        juneStudent.classList.remove("hover:bg-sky-500", "hover:rounded-lg", "hover:text-white");
+        juneStudent.classList.add("bg-emerald-400", "rounded-full");
+    }
+    juneAdministrator.addEventListener("click", ()=> {
+        document.getElementById('value').value = dia;
+        document.getElementById('delete-events').addEventListener("click", ()=> {
+            document.getElementById('value').value = "";
+            localStorage.setItem('dia'+ i + 'junio', "");
+        })
+    })
+}
+
 for(i = 1; i < 31; i++){     
     let june = document.querySelector('#dia'+ i); // Toma los dias de junio del administrador  
-    console.log(june);
+    
     let modal = document.querySelector('#modal'); // Toma la ventana emergente
     june.addEventListener("click", ()=> { // Cuando le de click a algun dia de junio ejecuta esta funcion
        select = june.id; // Toma el dia seleccionado
-       modal.showModal(); // Le da estilos al modal  
+       modal.showModal(); // Le da estilos al modal
        submitEvent = document.getElementById('submitEvent'); // Toma el buton de enviar del modal
        submitEvent.addEventListener("click", ()=> { // Cuando le de click al boton de enviar se ejecuta esta funcion
             value = document.getElementById('value').value // Toma lo escrito en el modal
-            localStorage.setItem(select+'junio', value); // Guarda lo escrito en el local storage 
+            if(value == "") {
+                
+            } else {
+                localStorage.setItem(select+'junio', value); // Guarda lo escrito en el local storage 
+            }          
         })
     })   
 }
