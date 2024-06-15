@@ -113,7 +113,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block';
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAlumn.name} ${getAlumn.lastname}`;
             document.getElementById('start-section-student').className = "block";
             document.getElementById('section-start').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
@@ -135,7 +135,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block' ;
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;
             document.getElementById('start-section-student').className = "block";
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";      
@@ -157,7 +157,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none'; 
             document.getElementById('barra-de-navegacion').style.display = 'block' 
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAdministrator.name} ${getAdministrator.lastname}`;     
             document.getElementById('start-section-administrator').className = "block"
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
@@ -481,7 +481,7 @@ for(i = 1; i < 31; i++){
         let select = june.id;  // Toma el dia seleccionado
         let showSavedEvent = document.getElementById('showSavedEvent'); // Toma el div donde se mostrara el evento
         let eventSaved = localStorage.getItem(select +"junio"); // Toma el evento que se guardo en ese dia del local storage
-        showSavedEvent.className = "block bg-white text-xl shadow-2xl shadow-blue-500 cbreak-words font-bold text-center p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-blue-400" // Le da estilos al div
+        showSavedEvent.className = "block bg-white text-xl shadow-2xl shadow-blue-500 break-words font-bold text-center p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-blue-400" // Le da estilos al div
         if(eventSaved == "" || eventSaved == undefined) {
             showSavedEvent.innerHTML = '<p> No hay eventos </p>';
         } else {
@@ -489,3 +489,32 @@ for(i = 1; i < 31; i++){
         }
     })
 }
+
+array = [];
+dia = [];
+
+for(let i = 1; i < 31; i++) {
+   let save = localStorage.getItem('dia'+ i + 'junio');
+   if(typeof save == "string" && save != "") {
+    array.push(save);
+    dia.push(i);
+   }
+}
+
+let checked = false;
+document.getElementById("checked-events").addEventListener("click", ()=> {
+    if(checked == false) {
+        div = document.getElementById("show-all");
+        div.className = className = "block relative h-80 overflow-auto font-bold mt-5 mb-5 border-blue-500 p-5";   
+        for(let j = 0; j <= array.length - 1; j++) {
+            text = document.getElementById("text-show")
+            text.innerHTML += `<div class="border-l-8 p-2 bg-white rounded-lg border-blue-500 w-48 h-56"> <p class="text-blue-400"> ${dia[j]} de Junio</p> <p class="text-center font-bold mt-3"> ${array[j]} </p></div>`;
+            checked = true;
+        }
+    } else{
+        document.getElementById("show-all").className = "hidden";
+        text.innerHTML = "";
+        checked = false;
+    }
+})
+
