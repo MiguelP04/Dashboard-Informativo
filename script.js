@@ -113,7 +113,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block';
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAlumn.name} ${getAlumn.lastname}`;
             document.getElementById('start-section-student').className = "block";
             document.getElementById('section-start').className= "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
@@ -135,7 +135,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none';  
             document.getElementById('barra-de-navegacion').style.display = 'block' ;
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getTeacher.name} ${getTeacher.lastname}`;
             document.getElementById('start-section-student').className = "block";
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";      
@@ -157,7 +157,7 @@ document.getElementById('validate-date').addEventListener("click", ()=> {
             alert("Bienvenido!!");
             document.getElementById('login').style.display = 'none'; 
             document.getElementById('barra-de-navegacion').style.display = 'block' 
-            document.getElementById('barra-secundaria').className = 'block flex bg-white font-bold p-4 justify-between sticky top-0';
+            document.getElementById('barra-secundaria').className = 'block z-20 flex bg-white font-bold p-4 justify-between sticky top-0';
             document.getElementById('username').innerHTML = `${getAdministrator.name} ${getAdministrator.lastname}`;     
             document.getElementById('start-section-administrator').className = "block"
             document.getElementById('section-start').className = "bg-blue-400 flex items-center space-x-2 cursor-pointer h-14 p-5";
@@ -481,7 +481,7 @@ for(i = 1; i < 31; i++){
         let select = june.id;  // Toma el dia seleccionado
         let showSavedEvent = document.getElementById('showSavedEvent'); // Toma el div donde se mostrara el evento
         let eventSaved = localStorage.getItem(select +"junio"); // Toma el evento que se guardo en ese dia del local storage
-        showSavedEvent.className = "block bg-white text-xl shadow-2xl shadow-blue-500 cbreak-words font-bold text-center p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-blue-400" // Le da estilos al div
+        showSavedEvent.className = "block bg-white text-xl shadow-2xl shadow-blue-500 break-words font-bold text-center p-5 mt-5 mb-10 ml-5 w-64 h-72 border-l-8 rounded-lg border-blue-400" // Le da estilos al div
         if(eventSaved == "" || eventSaved == undefined) {
             showSavedEvent.innerHTML = '<p> No hay eventos </p>';
         } else {
@@ -489,3 +489,39 @@ for(i = 1; i < 31; i++){
         }
     })
 }
+
+array = []; // Aqui se guardaran los eventos disponibles
+dia = []; // Aque se guardaran la fecha de esos eventos
+
+for(let i = 1; i < 31; i++) { // En este ciclo se guardaran todos los eventos con sus fechas
+   let save = localStorage.getItem('dia'+ i + 'junio'); // En esta variable se guardan los eventos que estan en el local storage
+   if(typeof save == "string" && save != "") { // Si hay eventos escritos, entra en esta condicion
+    array.push(save); // Se guardan los eventos en el array 
+    dia.push(i); // Se guardan la fecha de los eventos en el array
+   }
+}
+
+let checked = false;
+document.getElementById("checked-events").addEventListener("click", ()=> { // Se ejecuta cuando se le da click al boton de mostrar eventos
+    if(checked == false) { // Cuando se active el boton, entra en esta condicion
+        div = document.getElementById("show-all");
+        text = document.getElementById("text-show");
+        div.className = className = "block relative h-80 overflow-auto font-bold mt-4 mb-4 border-blue-500 p-5";  
+        if(array.length == 0) { // Si no hay eventos escritos en el array, entra esta condicion
+            div.classList.remove("h-80", "overflow-auto");
+            text.className = "";
+            text.innerHTML += `<p class="text-xl text-center">No hay eventos.</p>`; // Muestra el mensaje "No hay eventos"
+            checked = true; //  Cambia la variable a true
+        } else{ // Sino, entra en esta condicion
+            for(let j = 0; j <= array.length - 1; j++) { // En este ciclo, guarda los eventos y los muestra
+                text.innerHTML += `<div class="border-l-8 p-2 bg-white rounded-lg border-blue-500 w-48 h-56"> <p class="text-blue-400"> ${dia[j]} de Junio</p> <p class="text-center font-bold mt-3"> ${array[j]} </p></div>`;
+                checked = true;          
+            }
+        }
+    } else{
+        document.getElementById("show-all").className = "hidden";
+        text.innerHTML = "";
+        checked = false;
+    }
+})
+
